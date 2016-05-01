@@ -1,4 +1,4 @@
-U_BOOT_FLAGS=	ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+U_BOOT_FLAGS=	ARCH=arm CROSS_COMPILE=arm-none-eabi-
 
 all: u-boot
 
