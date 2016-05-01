@@ -65,8 +65,11 @@ clean:
 
 # Only used to generate a release distfile.
 distfile:
+	git reset --hard HEAD
 	git clean -fdx
 	git submodule update --init --recursive
+	git submodule foreach git reset --hard HEAD
+	git submodule foreach git clean -fdx
 	@release=`git show-ref --tags -d | awk -F/ '{print $$3}'`; \
 		tar --exclude=.git -czf ../${PROJECT}-$${release}.tar.gz . && \
 		ls -l ../${PROJECT}-$${release}.tar.gz
