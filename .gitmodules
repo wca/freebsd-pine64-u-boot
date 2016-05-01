@@ -1,0 +1,11 @@
+[submodule "external/u-boot-pine64"]
+	path = external/u-boot-pine64
+	url = git://github.com/longsleep/u-boot-pine64.git
+	branch = pine64-hacks
+[submodule "external/arm-trusted-firmware-pine64"]
+	path = external/arm-trusted-firmware-pine64
+	url = git://github.com/apritzel/arm-trusted-firmware
+	branch = allwinner
+[submodule "external/sunxi-pack-tools"]
+	path = external/sunxi-pack-tools
+	url = git://github.com/longsleep/sunxi-pack-tools
