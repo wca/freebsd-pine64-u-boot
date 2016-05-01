@@ -1,3 +1,4 @@
+PROJECT=	wca-freebsd-pine64-u-boot
 REQUIRED_BINS=	gdd unix2dos arm-none-eabi-gcc aarch64-none-elf-gcc
 REQUIRED_PKGS=	coreutils unix2dos arm-none-eabi-gcc492 aarch64-none-elf-gcc
 
@@ -61,3 +62,11 @@ clean:
 	${ATF_MAKE} clean || true
 	${SUNXI_MAKE} clean || true
 	rm -f ${U_BOOT_DEP} ${ATF_DEP} ${SUNXI_DEP}
+
+# Only used to generate a release distfile.
+distfile:
+	git clean -fdx
+	git submodule update --init --recursive
+	@release=`git show-ref --tags -d | awk -F/ '{print $$3}'`; \
+		tar --exclude=.git -czf ../${PROJECT}-$${release}.tar.gz . && \
+		ls -l ../${PROJECT}-$${release}.tar.gz
