@@ -1,6 +1,6 @@
 [submodule "external/u-boot-pine64"]
 	path = external/u-boot-pine64
-	url = git://github.com/longsleep/u-boot-pine64.git
+	url = git://github.com/wca/u-boot-pine64.git
 	branch = pine64-hacks
 [submodule "external/arm-trusted-firmware-pine64"]
 	path = external/arm-trusted-firmware-pine64
