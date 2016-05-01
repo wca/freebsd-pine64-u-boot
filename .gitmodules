@@ -8,7 +8,7 @@
 	branch = allwinner
 [submodule "external/sunxi-pack-tools"]
 	path = external/sunxi-pack-tools
-	url = git://github.com/longsleep/sunxi-pack-tools
+	url = git://github.com/wca/sunxi-pack-tools
 [submodule "external/longsleep-build-pine64-image"]
 	path = external/longsleep-build-pine64-image
-	url = git://github.com/longsleep/build-pine64-image
+	url = git://github.com/wca/build-pine64-image
