@@ -52,3 +52,8 @@ image: ${LONGSLEEP_PATH}/build/u-boot-with-dtb.bin
 
 ${LONGSLEEP_PATH}/build/u-boot-with-dtb.bin: u-boot atf sunxi
 	cd ${LONGSLEEP_PATH}/u-boot-postprocess && ./u-boot-postprocess.sh
+
+clean:
+	${U_BOOT_MAKE} clean || true
+	${ATF_MAKE} clean || true
+	${SUNXI_MAKE} clean || true
